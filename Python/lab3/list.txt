@@ -1,0 +1,22 @@
+ID: 149921374, Name: Диван БАФФ экокожа санд в прихожую, офис, салон красоты MONOFIX, Price: 7264, Rating: 4.8, Reviews: 2508
+ID: 175641065, Name: Диван кровать Тай GEOFORT, Price: 8133, Rating: 4.8, Reviews: 820
+ID: 250993268, Name: Диван Банкетка модуль угловой СОН СЕРВИС, Price: 5122, Rating: 4.8, Reviews: 73
+ID: 217424366, Name: Диван раскладной Тай GEOFORT, Price: 8133, Rating: 4.8, Reviews: 820
+ID: 186476085, Name: Диван-еврокинжка Тревел ТОРГ ММ, Price: 12101, Rating: 5, Reviews: 1
+ID: 72077453, Name: Диван-книжка Рогожка ТОРГ ММ, Price: 9755, Rating: 4.3, Reviews: 115
+ID: 72178001, Name: Диван ТОРГ ММ, Price: 8803, Rating: 4.4, Reviews: 106
+ID: 72178000, Name: Диван ТОРГ ММ, Price: 8616, Rating: 4.4, Reviews: 106
+ID: 72178003, Name: Диван ТОРГ ММ, Price: 8616, Rating: 4.4, Reviews: 106
+ID: 72230724, Name: Диван ТОРГ ММ, Price: 12025, Rating: 4, Reviews: 29
+ID: 72230725, Name: Диван ТОРГ ММ, Price: 12572, Rating: 4, Reviews: 29
+ID: 178730115, Name: Диван-книжка Комфорт астра ММ ГРУПП, Price: 11726, Rating: 4.3, Reviews: 480
+ID: 205936350, Name: Диван на кухню офисный прихожую RAKIZA, Price: 5578, Rating: 4.8, Reviews: 2698
+ID: 174856025, Name: Диван на кухню прямой офисный в гостиную прихожую салон Диван24, Price: 7201, Rating: 4.6, Reviews: 1047
+ID: 227813055, Name: Диван Монреаль 95 см, серый SALON TRON, Price: 10234, Rating: 4.8, Reviews: 74
+ID: 157917547, Name: Диван СЕЛИН В.А., Price: 5703, Rating: 4.8, Reviews: 3014
+ID: 178730113, Name: Диван-книжка Комфорт экокожа ММ ГРУПП, Price: 13196, Rating: 4.3, Reviews: 480
+ID: 178730118, Name: Диван-книжка Комфорт астра ММ ГРУПП, Price: 11726, Rating: 4.3, Reviews: 480
+ID: 149928730, Name: Диван БАФФ экокожа салатовый в прихожую, офис, салон красоты MONOFIX, Price: 9558, Rating: 4.8, Reviews: 2508
+ID: 217889147, Name: Диван Сканди, синий SALON TRON, Price: 13266, Rating: 4.6, Reviews: 124
+ID: 196683890, Name: Диван на кухню офисный прихожую RAKIZA, Price: 5378, Rating: 4.8, Reviews: 2698
+ID: 78368134, Name: Диван кровать раскладной прямой Диван24, Price: 14645, Rating: 4.3, Reviews: 284

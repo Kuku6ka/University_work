@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WpfApp1</name>
+    </assembly>
+    <members>
+        <member name="T:WpfApp1.App">
+            <summary>
+            Interaction logic for App.xaml
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:WpfApp1.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:WpfApp1.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:WpfApp1.MainWindow">
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="M:WpfApp1.MainWindow.Button_num_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Обработчик нажатия кнопки для перевода системы счисления
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WpfApp1.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+    </members>
+</doc>

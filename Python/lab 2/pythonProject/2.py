@@ -1,6 +1,7 @@
 from math import sqrt, erf, inf
 from scipy import integrate, stats
 from numpy import mean
+import numpy as np
 
 def approx_poly(x, t, r):
     M = [[] for _ in range(r + 1)]
@@ -72,16 +73,8 @@ def Sigma(data):
     return sqrt(mean_of_squares - square_of_mean)
 
 
-def power_test(delta_mean, sigma, alpha=0.05):
-    # Найдите критическое значение z для уровня значимости alpha
-    z_alpha = stats.norm.ppf(1 - alpha / 2)
-
-    # Найдите z-балл для альтернативной гипотезы
-    z_effect = delta_mean / sigma
-
-    # Рассчитайте мощность теста
-    power = 1 - stats.norm.cdf(z_alpha - z_effect)
-
+def calculate_power(p_value, alpha=0.05):
+    power = 1 - alpha if p_value <= alpha else np.exp(-stats.norm.cdf(np.sqrt(2 * np.log(1 / alpha)) - stats.norm.ppf(p_value)))
     return power
 
 
@@ -115,4 +108,8 @@ def main():
 
     print(f"p_value_0 = {p_0_value} , p_value_a = {p_a_value}")
 
+    power_0 = calculate_power(p_value(max_del_x_0, sigma_0))
+    power_a = calculate_power(p_value(max_del_x_a, sigma_a))
+
+    print(f"power_0 = {power_0} , power_a = {power_a}")
 main()

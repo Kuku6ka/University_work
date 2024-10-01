@@ -1,0 +1,28 @@
+﻿<Window x:Class="_1._2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_1._2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid x:Name="Main_Grid">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+        <TextBlock x:Name = "TextBlockZapr" Grid.Column="1" TextAlignment="Center" Height="20" Width="200" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10" FontSize="20"/>
+        <Button x:Name="Button_result" Grid.Row="1" Grid.Column="2" Width="100" Height="40" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Проверить"/>
+        <TextBox x:Name = "TextBox_input" Grid.Column="0" Grid.Row="1" TextAlignment="Left" Height="40" Width="200" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10" FontSize="20"/>
+        <TextBlock x:Name = "TextBlock_error" Grid.Column="0" Grid.Row="2" TextAlignment="Left" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40" Width="400" Grid.ColumnSpan="2" Foreground="Red" FontSize="20"/>
+        <TextBlock x:Name = "TextBlock_pass" Grid.Column="0" Grid.Row="2" TextAlignment="Left" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40" Width="400" Grid.ColumnSpan="2" Foreground="Green" FontSize="20"/>
+        
+    </Grid>
+</Window>
