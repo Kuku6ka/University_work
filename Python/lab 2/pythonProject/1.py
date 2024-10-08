@@ -30,16 +30,10 @@ def inv_f_norm(p, mu, s, t=0.001):
             break
     return mid_x
 
-'''def proverca(P_value, alpha, power, beta, n):
-    if P_value > alpha and power > beta:
-        print(f"Требуется часов {n}")
-        print(f"при этом мощность = {power}")
-'''
-
 def main():
-    p_0 = 3  # первая гипотеза
-    p_a = 4  # вторая гипотеза
-    x = 500 / 8 # колличество плиток
+    p_0 = 3
+    p_a = 4
+    x = 500 / 8
     alpha = 0.05
     beta = 0.8
 

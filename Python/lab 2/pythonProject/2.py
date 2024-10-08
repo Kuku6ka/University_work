@@ -3,6 +3,7 @@ from scipy import integrate, stats
 from numpy import mean
 import numpy as np
 
+#полиномиальная апроксимация с порядком r
 def approx_poly(x, t, r):
     M = [[] for _ in range(r + 1)]
     b = []
@@ -16,25 +17,20 @@ def approx_poly(x, t, r):
 def Gaus(matrix, b):
     n = len(matrix)
 
-    # Forward elimination
     for i in range(n):
-        # Find the maximum element in this column
         max_row = i
         for k in range(i + 1, n):
             if abs(matrix[k][i]) > abs(matrix[max_row][i]):
                 max_row = k
 
-        # Swap rows if necessary
         if max_row != i:
             matrix[i], matrix[max_row] = matrix[max_row], matrix[i]
             b[i], b[max_row] = b[max_row], b[i]
 
-        # Make pivot element equal to 1
         pivot = matrix[i][i]
         matrix[i] = [element / pivot for element in matrix[i]]
         b[i] /= pivot
 
-        # Subtract this row from other rows
         for k in range(n):
             if k != i:
                 factor = matrix[k][i]
@@ -51,12 +47,15 @@ def Gaus(matrix, b):
 
     return x
 
+#нормальное распределение
 def f_norm(x, mu=0, s=1):
     return (1 + erf((x - mu) / sqrt(2) / s)) / 2
 
+#нахождение p-value
 def p_value(max_delta_x, sigma):
     return 2 * integrate.quad(f_norm, -inf, -max_delta_x, args=(0, sigma))[0]
 
+#нахождение полиномиального значения
 def polynomial_value(coefficients, x):
     result = 0
     power = len(coefficients) - 1
@@ -65,6 +64,7 @@ def polynomial_value(coefficients, x):
         power -= 1
     return result
 
+#нахождение сигмы(стандартного отклонения)
 def Sigma(data):
     squared_data = [x ** 2 for x in data]
     Mean = mean(data)
@@ -72,7 +72,7 @@ def Sigma(data):
     square_of_mean = Mean ** 2
     return sqrt(mean_of_squares - square_of_mean)
 
-
+#вычисление мощности
 def calculate_power(p_value, alpha=0.05):
     power = 1 - alpha if p_value <= alpha else np.exp(-stats.norm.cdf(np.sqrt(2 * np.log(1 / alpha)) - stats.norm.ppf(p_value)))
     return power
@@ -82,8 +82,8 @@ def main():
     x = [12, 16, 24, 36, 23, 12, 65, 75, 33]
     t = [i for i in range(len(x))]
 
-    h_0 = 3
-    h_a = 28
+    h_0 = 2
+    h_a = 3
 
     k_0 = approx_poly(x, t, h_0)
     k_a = approx_poly(x, t, h_a)
