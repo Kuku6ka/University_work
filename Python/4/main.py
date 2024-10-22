@@ -39,7 +39,9 @@ def main():
     #вычисление градиентного спуска
     time_g_0 = time()
 
-    a0 = gradient_descent(F,[0]*5)
+    params_list = [0.5, -0.2, 0.9, 0, 1.1]
+
+    a0 = gradient_descent(F,params_list, 100, 0.4)
 
     time_g_1 = time()
 
@@ -48,7 +50,7 @@ def main():
     #вычисление стохастического спуска
     time_s_0 = time()
 
-    a1 = minimize_stochastic(f,[i for i in range(500)],[0]*500,[0]*5)
+    a1 = minimize_stochastic(f,[i for i in range(500)],[0]*500,[0]*5, 0.09, 900)
 
     time_s_1 = time()
 

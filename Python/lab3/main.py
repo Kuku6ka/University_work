@@ -34,11 +34,14 @@ def is_valid(item):
         return False
 
 
-def filter_data(data, min_cost=None, max_cost=None, min_rating=None):
+def filter_data(data, min_cost=None, max_cost=None, min_rating=None, max_reviews=None):
     new_data = []
     for item in data:
         cost = int(item['price'])
         rating = float(item['rating'])
+        revie = int(item['reviews_numb'])
+        if revie < max_reviews:
+            continue
         if min_cost and cost < min_cost:
             continue
         if max_cost and cost > max_cost:
@@ -64,6 +67,7 @@ def main():
         try:
             WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.CSS_SELECTOR, ".product-card")))
         except:
+            print("Непредвиденная ошибка")
             break
 
         html_content = driver.page_source
