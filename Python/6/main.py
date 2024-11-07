@@ -1,8 +1,6 @@
-from dsmltf import knn_classify, predict, principal_components, genser
+from dsmltf import knn_classify, principal_components
 import csv
-import genser
 from genser import transform_to
-from mpl_toolkits.mplot3d.proj3d import transform
 
 
 def csv_read():
@@ -27,7 +25,7 @@ def main():
     data = sort_data(src_data)
 
     # k ближайших (голый)
-    for k in range(1, 7):
+    for k in range(1, 15):
         n_correct = 0
         for flower in data:
             values, variety = flower
@@ -46,7 +44,7 @@ def main():
     for j in range(len(data1)):
         PCA_data.append((data1[j], y[j]))
 
-    for k in range(1, 7):
+    for k in range(1, 15):
         n_correct = 0
         for flower in PCA_data:
             values, variety = flower
@@ -63,7 +61,7 @@ def main():
         SER_data.append((data2[j], y[j]))
 
     print("П.4")
-    for k in range(1, 7):
+    for k in range(1, 15):
         n_correct = 0
         for flower in SER_data:
             values, variety = flower
