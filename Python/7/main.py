@@ -192,16 +192,20 @@ def main():
 
     count = dict(indexes)
 
-    nb_word_prob = word_probabilities_naiv(count, len(spam_mess), len(none_spam_mess))
-    print(nb_word_prob)
-    word_prob = word_probabilities(count, len(spam_mess), len(none_spam_mess), 0.6)
-    print(word_prob)
+    k = 0.1
+    while (k <= 1):
+        print(f"\nПРИ K={k}")
+        nb_word_prob = word_probabilities_naiv(count, len(spam_mess), len(none_spam_mess))
+        print(nb_word_prob)
+        word_prob = word_probabilities(count, len(spam_mess), len(none_spam_mess), k)
+        print(word_prob)
 
-    for mes in common_messages:
-        print(mes)
-        spam_prob1 = spam_probability_naiv(nb_word_prob, mes)
-        spam_prob2 = spam_probability(word_prob, mes)
-        print(spam_prob1, spam_prob2)
+        for mes in common_messages:
+            print(mes)
+            spam_prob1 = spam_probability_naiv(nb_word_prob, mes)
+            spam_prob2 = spam_probability(word_prob, mes)
+            print(spam_prob1, spam_prob2)
+        k += 0.1
 
 if __name__ == '__main__':
     main()
