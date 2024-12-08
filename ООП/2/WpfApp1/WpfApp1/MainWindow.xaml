@@ -1,0 +1,44 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid x:Name = "MainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+        <TextBox x:Name="TextBox_1" Width="150" Height="30" FontSize="20"></TextBox>
+        <TextBox Grid.Row="1" x:Name="TextBox_2" Width="150" Height="30" FontSize="20"></TextBox>
+        <TextBox Grid.Row="2" x:Name="TextBox_3" Width="150" Height="30" FontSize="20"></TextBox>
+        <TextBox Grid.Row="3" x:Name="TextBox_4" Width="150" Height="30" FontSize="20"></TextBox>
+        <TextBox Grid.Row="4" x:Name="TextBox_5" Width="150" Height="30" FontSize="20"></TextBox>
+        <TextBox Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" x:Name="TextBox_space" Width="400" Height="30" HorizontalAlignment="Center" FontSize="20"></TextBox>
+        
+        <Button Grid.Row="0" Grid.Column="1" x:Name="Button_GCD_Stein" Width="150" Height="30">Вычислить НОД(Штейна)</Button>
+        <Button Grid.Row="1" Grid.Column="1" x:Name="Button_GCD_2" Width="150" Height="30">Вычислить НОД(2 числа)</Button>
+        <Button Grid.Row="2" Grid.Column="1" x:Name="Button_GCD_3" Width="150" Height="30">Вычислить НОД(3 числа)</Button> 
+        <Button Grid.Row="3" Grid.Column="1" x:Name="Button_GCD_4" Width="150" Height="30">Вычислить НОД(4 числа)</Button>
+        <Button Grid.Row="4" Grid.Column="1" x:Name="Button_GCD_5" Width="150" Height="30">Вычислить НОД(5 числа)</Button>
+        <Button Grid.Row="5" Grid.Column="2" x:Name="Button_GCD_space" Width="200" Height="30" HorizontalAlignment="Left">Вычислить НОД(нескольких чисел)</Button>
+        
+        <TextBlock Grid.Column="0" Grid.Row="6" x:Name="TextBlock_result" Grid.ColumnSpan="2" FontSize="20"></TextBlock>
+        <TextBlock Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" x:Name="TextBlock_Error" FontSize="20" ></TextBlock>
+        <TextBlock Grid.Row="0" Grid.Column="2" Grid.RowSpan="3" x:Name="TextBlock_Time" FontSize="14"></TextBlock>
+    </Grid>
+</Window>

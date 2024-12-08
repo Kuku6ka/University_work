@@ -1,0 +1,47 @@
+﻿<Window x:Class="_3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid x:Name="MainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+        <GroupBox Grid.Row="0" Grid.Column="0">
+            <GroupBox.Header>Material</GroupBox.Header>
+            <ListBox x:Name="materialListBox">
+                
+            </ListBox>
+        </GroupBox>
+        
+        <GroupBox Grid.Row="0" Grid.Column="1">
+            <GroupBox.Header>CrossSection</GroupBox.Header>
+            <ListBox x:Name="crossSectionListBox">
+                
+            </ListBox>
+        </GroupBox>
+        
+        <GroupBox Grid.Row="0" Grid.Column="2">
+            <GroupBox.Header>TestResult</GroupBox.Header>
+            <ListBox x:Name="testResultListBox">
+                
+            </ListBox>
+        </GroupBox>
+        
+        <Button Grid.Column="0" Grid.Row="2" Height="30" Width="150" x:Name="Button_result">Кнопка</Button>
+        
+        <TextBlock Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" x:Name="ResulTextBlock"></TextBlock>
+
+    </Grid>
+</Window>
